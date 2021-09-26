@@ -1,0 +1,17 @@
+"dependencies": {  
+    "@babel/cli": "^7.15.7",  
+    "@babel/core": "^7.15.5", 
+    "@babel/node": "^7.15.4", 
+    "@babel/plugin-transform-runtime": "^7.15.0", 
+    "@babel/preset-env": "^7.15.6", 
+    "cors": "^2.8.5", --> conf. qué dispositivos se quieren conectar 
+    "dotenv": "^10.0.0", --> conf y usar variables de entorno 
+    "express": "^4.17.1", --> framework de node para optimizar el trabajo de las rutas  
+    "morgan": "^1.10.0", --> Madlewere --> función que nos devuelve las peticiones que se realicen  
+    "mysql": "^2.18.1", 
+    "mysql2": "^2.3.0", --> libreria para trabajar con promesas 
+    "nodemon": "^2.0.13",--> dejas corriendo la app 
+    "swagger-jsdoc": "^6.1.0", --> librerias que permiten hace documentación 
+    "swagger-ui-express": "^4.1.6" 
+  }
+dependencies -Dev --> Conf. para usar y traduci
