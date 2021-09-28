@@ -30,6 +30,15 @@
 .container-search{
   height: 45px;
   background-color: #2BCAC8;
+  display: flex;
+  align-items: center;
+}
+.search{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .add{
   height:60px;
@@ -37,15 +46,25 @@
   background-color: #215C7A;
   position: absolute;
   top: 70px;
-  left: 254px;
+  left: 255px;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.add:hover{
+  transform: translateY(-4px)
 }
 .add-circle{
   height:48px;
   width:48px;
   background-color: #102D3B;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plus-circle{
+  color: #fff;
 }

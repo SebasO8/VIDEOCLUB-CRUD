@@ -3,11 +3,14 @@
     <h1 class='title-header'>CRUD MOVIES</h1>
   </div>
   <div class='container-search'>
-    <p>segundo header</p>
-  </div>
-  <div class='add'>
-    <div class='add-circle'>
-      <i class="fas fa-plus"></i>
+    <div class='search'>
+      <i class="fas fa-search fa-lg"></i>
     </div>
   </div>
+  <div class='add' (click)="modal.showModal()">
+    <div class='add-circle'>
+      <i class="fas fa-plus fa-2x plus-circle"></i>
+    </div>
+  </div>
+  <app-mmodal #modal></app-mmodal>
 </div>
