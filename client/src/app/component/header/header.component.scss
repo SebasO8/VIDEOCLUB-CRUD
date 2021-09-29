@@ -41,12 +41,12 @@
   align-items: center;
 }
 .add{
-  height:60px;
-  width:60px;
+  height:100px;
+  width:100px;
   background-color: #215C7A;
-  position: absolute;
+  position: fixed;
   top: 70px;
-  left: 255px;
+  left: 93%;
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -57,8 +57,8 @@
   transform: translateY(-4px)
 }
 .add-circle{
-  height:48px;
-  width:48px;
+  height:80px;
+  width:80px;
   background-color: #102D3B;
   border-radius: 50%;
   display: flex;
@@ -67,4 +67,42 @@
 }
 .plus-circle{
   color: #fff;
+}
+
+@media screen and (max-width:1024px){
+  .add{
+    left: 90.5%;
+  }
+  
+}
+
+@media screen and (max-width:768px){
+  .add{
+    height:60px;
+    width:60px;
+    left: 92%;
+  }
+  .add-circle{
+    height:48px;
+    width:48px;
+    
+  }
+}
+
+@media screen and (max-width:425px){
+  .add{
+    left: 86%;
+  }
+}
+
+@media screen and (max-width:375px){
+  .add{
+    left: 84%;
+  }
+}
+
+@media screen and (max-width:320px){
+  .add{
+    left: 82%;
+  }
 }

@@ -1,6 +1,7 @@
 import express from 'express';
 import allRouters from './routes'
 import morgan from 'morgan'
+import cors from 'cors'
 
 //INIT EXPRESS
 const app = express();
@@ -11,7 +12,8 @@ const port = (process.env.PORT || 3800);
 
 
 //MIDDLEWARE
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 app.use(morgan('dev'));
 app.use(allRouters);
 

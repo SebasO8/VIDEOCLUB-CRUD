@@ -7,9 +7,9 @@
       </div>
       <div class='modalC-container'>
         <p>Title</p>
-        <input type="text" placeholder="Title" maxlength="50">
+        <input type="text" id='title' name='title' #title placeholder="Title" maxlength="50" [ngModel]="changeTitle(title.value)">
         <p>Year</p>
-        <input type="number" placeholder="Year"  oninput="if(value > 9999 || value < 0) value = 0">
+        <input type="number" id='year' placeholder="Year"  oninput="if(value > 9999 || value < 0) value = 0">
         <p>Time</p>
         <input type="number" placeholder="Time"  oninput="if(value > 999 || value < 0) value = 0">
         <p>Language</p>
@@ -18,7 +18,7 @@
         <input type="date">
         <p>Release Country</p>
         <input type="text" placeholder="Release Country" maxlength="5">
-        <div class='modalC-save'>Save Changes</div>
+        <div class='modalC-save' (click)= "Add()">Save Changes</div>
         <div class='modalC-cancel' (click)= "show = false;">Cancel</div>
       </div>
     </div>

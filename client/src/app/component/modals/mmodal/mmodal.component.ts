@@ -16,6 +16,23 @@ export class MmodalComponent {
   hideModal(){
     this.show = false;
   }
+  
+  public Title = '';
+  // public Number = ;
+
+  changeTitle(value: any){
+    this.Title = value
+  };
+
+  public MovieArray: (string | number)[] = [];
+
+  Add(){
+    this.MovieArray.push(this.Title)
+    let element: any = document.getElementById('title')
+    element.value = ''
+    console.log(this.MovieArray)
+  }
+  
 
   
 

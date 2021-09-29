@@ -9,7 +9,10 @@
   </div>
   <div class='add' (click)="modal.showModal()">
     <div class='add-circle'>
-      <i class="fas fa-plus fa-2x plus-circle"></i>
+      <!-- <i class="{{changeVariable()}} "></i> -->
+      <i class="fas fa-plus fa-3x plus-circle" *ngIf="size2"></i>
+      <i class="fas fa-plus fa-2x plus-circle" *ngIf="size1"></i>
+      
     </div>
   </div>
   <app-mmodal #modal></app-mmodal>
