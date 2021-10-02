@@ -1,27 +1,39 @@
-<ng-container *ngIf="show">
-  <div class='modalC'>
-    <div class='modalC-content'>
-      <div class='modalC-header'>
-        <h4 class='modalC-title'>Add a new movie</h4>
-        <i class="fas fa-times-circle fa-2x close" (click)= "show = false;" ></i>
+<ng-container *ngIf="show" > 
+  <div class='modalC' (window:resized)="onResize($event)">
+    <div [ngClass]="size == false ? 'modalC-content' : 'content'" (window:resized)="screenSize()">
+      <div [ngClass]="size == false ? 'modalC-header' : 'header'" >
+        <h4 class='modalC-title'>ADD NEW MOVIE</h4>
+        <i [ngClass]="size == false ? 'fas fa-times-circle fa-2x' : 'fas fa-time-circle fa-2x close '" (click)= "hideModal()" ></i>
+        <ng-container *ngIf="size">
+          <div>
+            <div class='save' (click)= "Add()">Save Changes</div>
+            <div class='cancel' (click)= "hideModal()">Cancel</div>
+          </div>
+        </ng-container>
       </div>
       <div class='modalC-container'>
-        <p>Title</p>
-        <input type="text" id='title' name='title' #title placeholder="Title" maxlength="50" [ngModel]="changeTitle(title.value)">
-        <p>Year</p>
-        <input type="number" id='year' placeholder="Year"  oninput="if(value > 9999 || value < 0) value = 0">
-        <p>Time</p>
-        <input type="number" placeholder="Time"  oninput="if(value > 999 || value < 0) value = 0">
-        <p>Language</p>
-        <input type="text" placeholder="Language" maxlength="50">
-        <p>Release Date</p>
-        <input type="date">
-        <p>Release Country</p>
-        <input type="text" placeholder="Release Country" maxlength="5">
-        <div class='modalC-save' (click)= "Add()">Save Changes</div>
-        <div class='modalC-cancel' (click)= "show = false;">Cancel</div>
+        <ng-container *ngIf="size">
+          <i class="fas fa-times-circle fa-2x " (click)= "hideModal()" ></i>
+        </ng-container>
+        <form class='modalC-form' >
+          <p>Title</p>
+          <input type="text" id='title' name='title' #title placeholder="Title" maxlength="50" [ngModel]="changeTitle(title.value)">
+          <p>Year</p>
+          <input type="number" id='year' placeholder="Year"  oninput="if(value > 9999 || value < 0) value = 0">
+          <p>Time</p>
+          <input type="number" placeholder="Time"  oninput="if(value > 999 || value < 0) value = 0">
+          <p>Language</p>
+          <input type="text" placeholder="Language" maxlength="50">
+          <p>Release Date</p>
+          <input type="date">
+          <p>Release Country</p>
+          <input type="text" placeholder="Release Country" maxlength="5">
+          <ng-container *ngIf="!size">
+            <div class='modalC-save' (click)= "Add()">Save Changes</div>
+            <div class='modalC-cancel' (click)= "hideModal()">Cancel</div>
+          </ng-container>
+        </form>
       </div>
     </div>
   </div>
-  
 </ng-container>

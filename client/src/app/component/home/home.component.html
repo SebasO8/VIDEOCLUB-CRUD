@@ -1,5 +1,5 @@
-<button routerLink='/add' type="button" class="btn btn-dark">Agregar</button>
-<hr/>
+<!-- <button routerLink='/add' type="button" class="btn btn-dark">Agregar</button>
+<hr/> -->
 
 <table class="table">
   <thead class="table-dark">
@@ -13,6 +13,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let movie of ListMovie">
+      
       <th>{{movie.mov_id}}</th>
       <td>{{movie.mov_title}}</td>
       <td>{{movie.mov_year}}</td>
@@ -20,9 +21,11 @@
         <button type="button"  class="btn btn-dark">Editar</button>
       </td>
       <td>
-        <button type="button" class="btn btn-dark" (click)="delMovie(movie.mov_id)">Eliminar</button>
+        <button type="button" class="btn btn-dark" >Eliminar</button>
       </td>
     </tr>
     
   </tbody>
 </table>
+
+<p>home funciona</p>

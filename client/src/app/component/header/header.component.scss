@@ -45,7 +45,7 @@
   width:100px;
   background-color: #215C7A;
   position: fixed;
-  top: 70px;
+  top: 4.5%;
   left: 93%;
   border-radius: 12px;
   display: flex;
@@ -68,6 +68,9 @@
 .plus-circle{
   color: #fff;
 }
+.fa-plus{
+  font-size:48px;
+}
 
 @media screen and (max-width:1024px){
   .add{
@@ -81,17 +84,22 @@
     height:60px;
     width:60px;
     left: 92%;
+    top: 15.5%;
   }
   .add-circle{
     height:48px;
     width:48px;
-    
+  }
+
+  .fa-plus{
+    font-size:32px;
   }
 }
 
 @media screen and (max-width:425px){
   .add{
     left: 86%;
+    
   }
 }
 

@@ -26,6 +26,15 @@ body {
   box-sizing:border-box;
 }
 
+
+.test{
+  overflow-y:hidden;
+}
+
+.test2{
+  overflow-y:auto;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */

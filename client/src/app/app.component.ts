@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CRUD MOVIES';
-
+  idPrueba = document.getElementsByTagName("body")
+  segundaPrueba = 32
+  
+  mostar(){
+    console.log(this.segundaPrueba)
+  }
 
 
 }

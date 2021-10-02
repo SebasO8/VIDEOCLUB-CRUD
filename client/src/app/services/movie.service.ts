@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'; 
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
-  url='http://localhost:3800/movies'
+  
   constructor( private http: HttpClient) { }
+  url='http://localhost:3800/movies'
 
-
-getMovies()
+getMovies():Observable<any> 
 {
   return this.http.get(this.url);
 }
