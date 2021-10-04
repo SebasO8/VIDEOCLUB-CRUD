@@ -9,7 +9,7 @@ export class MovieService {
 
   
   constructor( private http: HttpClient) { }
-  url='http://localhost:3800/movies'
+  url='https://crud-ts-mysql.herokuapp.com/movies'
 
 getMovies():Observable<any> 
 {
@@ -38,7 +38,7 @@ editMovie(id:string, movie:Movie)
 }
 
 export interface Movie {
-  mov_id?:any;
+  mov_id?:string;
   mov_title?:string;
   mov_year?:string;
   mov_time?:string;

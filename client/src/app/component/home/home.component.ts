@@ -8,30 +8,29 @@ import {MovieService, Movie} from '../../services/movie.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  ListMovie: Movie[] = [];
+
   constructor( private MovieService: MovieService) { }
 
   // constructor(private service: MovieService) {}
 
   ngOnInit(): void {
     this.listMovie();
+    
   }
-
-  // getAllData(){
-  //   this.service.getMOvies().subscribe((res)=>{
-  //     console.log(res,'res==>');
-  //     this.readData=res;
-      
-  //   });
-
-  // };
+  toggle:boolean=true
+  readData:any;
+  toggleActive(){
+    this.toggle=!this.toggle
+    console.log(this.toggle)
+  }
 
   listMovie()
   {
     this.MovieService.getMovies().subscribe(
       res => {
+       
         
-        this.ListMovie = <any>res;
+        this.readData =res;
         
       },
       err => console.log(err)
